@@ -29,6 +29,9 @@ $(document).ready(function(){
 function loginsf(fn){
      $.ajax({
             type: 'POST',
+            beforeSend: function(xhr) {
+                 xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+            },
             crossOrigin: true,
             url: 'https://login.salesforce.com/services/oauth2/token',
             dataType: 'json',
