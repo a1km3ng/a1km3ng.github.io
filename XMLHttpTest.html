@@ -41,8 +41,7 @@ function loginsf(fn){
              fn(data.access_token);
             },
             error : function (data, errorThrown,status) {
-                  console.log('Error: '+jqXHR.status);
-                  console.log('textStatus: '+textStatus)
+                  console.log("An error occurred."); return false;
             }
     });
   }
